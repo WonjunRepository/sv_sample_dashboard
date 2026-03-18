@@ -1,0 +1,14 @@
+# 런타임 생성 파일
+_hin_graph.html
+
+# 기타 프로젝트 문서 (대시보드 배포에 불필요)
+*.pdf
+*.pptx
+*.docx
+*.ipynb
+*.tsx
+
+# Python 캐시
+__pycache__/
+*.pyc
+.env
