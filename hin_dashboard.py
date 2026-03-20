@@ -334,15 +334,7 @@ def build_graph(nodes: pd.DataFrame, edges: pd.DataFrame, mode: str, search: str
         src_icon  = {"내부": "●", "외부": "■", "공통": "⬤"}.get(source, "")
         src_label = {"내부": "내부 데이터", "외부": "외부 트렌드", "공통": "공통(브릿지)"}.get(source, source)
 
-        tooltip = (
-            f"<div style='font-family:sans-serif;padding:6px;background:#ffffff;border-radius:4px'>"
-            f"<b style='color:{info['color']};font-size:14px'>{label}</b><br>"
-            f"<span style='color:#666666;font-size:11px'>타입: {ntype}</span><br>"
-            f"<span style='color:#666666;font-size:11px'>소스: {src_icon} {src_label}</span>"
-            + ("<br><span style='color:#FF8C00;font-size:11px'>⭐ 핵심 브릿지 허브</span>" if is_hub else "")
-            + ("<br><span style='color:#888888;font-size:11px'>📍 중심 상품 노드</span>" if is_center else "")
-            + "</div>"
-        )
+        tooltip = f"{ntype}: {label}"
 
         # 고정 좌표 가져오기
         pos = FIXED_POSITIONS.get(label, {"x": 0, "y": 0})
