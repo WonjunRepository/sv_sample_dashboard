@@ -257,10 +257,11 @@ def build_graph(nodes: pd.DataFrame, edges: pd.DataFrame, mode: str, search: str
       "nodes": {
         "shadow": {"enabled": true, "size": 16, "x": 3, "y": 4},
         "font": {
-          "size": 13,
+          "size": 16,
           "face": "Noto Sans KR",
-          "strokeWidth": 2,
-          "strokeColor": "#000000"
+          "bold": false,
+          "strokeWidth": 3,
+          "strokeColor": "#ffffff"
         }
       },
       "edges": {
@@ -361,7 +362,9 @@ def build_graph(nodes: pd.DataFrame, edges: pd.DataFrame, mode: str, search: str
                 "highlight":  {"background": info["color"], "border": "#FFD700"},
                 "hover":      {"background": info["color"], "border": "#ffffff"},
             },
-            font={"color": node_font, "size": 18 if is_center else (16 if is_hub else 13)},
+            font={"color": node_font, "size": 22 if is_center else (20 if is_hub else 16),
+                  "strokeWidth": 3, "strokeColor": "#ffffff", "bold": False,
+                  "vadjust": 6},
             size=size,
             borderWidth=border_width,
             opacity=opacity,
