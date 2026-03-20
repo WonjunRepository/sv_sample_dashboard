@@ -614,8 +614,6 @@ def build_graph(nodes: pd.DataFrame, edges: pd.DataFrame, mode: str, search: str
 left_col, right_col = st.columns([3, 1])
 
 with left_col:
-    st.markdown("### 📊 이기종 정보 네트워크 (HIN) — 고정 레이아웃")
-
     # 현재 모드 표시 배지
     mode_badge = {
         "전체 보기": '<span class="badge b-com">⬤ 전체 보기</span>',
