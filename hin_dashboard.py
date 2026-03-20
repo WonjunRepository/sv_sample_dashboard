@@ -206,7 +206,7 @@ st.markdown("""
 <div class="db-header">
   <span style="font-size:2.6rem">🏪</span>
   <div>
-    <h1>세븐일레븐 지식 그래프 기반 트렌드 분석 대시보드 v4</h1>
+    <h1>세븐일레븐 정보 네트워크 시각화 대시보드</h1>
     <div class="sub">
       <span class="badge b-in">● 내부 원형</span>
       <span class="badge b-out">■ 외부 사각형</span>
